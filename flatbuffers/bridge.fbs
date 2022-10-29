@@ -1,0 +1,28 @@
+namespace model;
+
+table Options {
+  name:string;
+  comment:string;
+  email:string;
+  passphrase:string;
+}
+
+table StringResponse {
+  output:string;
+  error:string;
+}
+
+table BytesResponse {
+  output:[ubyte];
+  error:string;
+}
+
+table BoolResponse {
+  output:bool;
+  error:string;
+}
+
+table IntResponse {
+  output:int64;
+  error:string;
+}
