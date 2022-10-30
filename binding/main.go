@@ -10,8 +10,8 @@ import (
 	syncthingBridge "github.com/zebfross/syncthing-mobile/bridge"
 )
 
-//export SyncthingCall
-func SyncthingCall(name *C.char, payload unsafe.Pointer, payloadSize C.int) *C.BytesReturn {
+//export SyncthingBridgeCall
+func SyncthingBridgeCall(name *C.char, payload unsafe.Pointer, payloadSize C.int) *C.BytesReturn {
 	output := (*C.BytesReturn)(C.malloc(C.size_t(C.sizeof_BytesReturn)))
 	// we should free resources on dart side
 
