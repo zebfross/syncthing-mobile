@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package config;
+
+option go_package = "syncthing/config";
+
+enum Tuning {
+    TUNING_AUTO  = 0;
+    TUNING_SMALL = 1;
+    TUNING_LARGE = 2;
+}
