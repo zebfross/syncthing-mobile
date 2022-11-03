@@ -1,8 +1,8 @@
 cd proto
-protoc -I .. -I . --go_out=.. lib\protocol\bep.proto lib\protocol\deviceid_test.proto
-protoc -I .. -I . --go_out=.. lib\protocol\bep.proto lib\protocol\deviceid_test.proto
-protoc -I .. -I . --go_out=.. lib\config\authmode.proto lib\config\blockpullorder.proto lib\config\config.proto lib\config\deviceconfiguration.proto lib\config\folderconfiguration.proto lib\config\foldertype.proto lib\config\guiconfiguration.proto lib\config\ldapconfiguration.proto lib\config\ldaptransport.proto lib\config\observed.proto lib\config\optionsconfiguration.proto lib\config\pullorder.proto lib\config\size.proto lib\config\tuning.proto lib\config\versioningconfiguration.proto
-protoc -I .. -I . --go_out=.. lib\fs\copyrangemethod.proto lib\fs\types.proto
-protoc -I .. -I . --go_out=.. lib\db\structs.proto
-protoc -I .. -I . --go_out=.. lib\discover\local.proto
+protoc -I .. -I . --go_out=paths=source_relative:../syncthing/ protocol\bep.proto protocol\deviceid_test.proto
+protoc -I .. -I . --go_out=paths=source_relative:../syncthing/ protocol\bep.proto protocol\deviceid_test.proto
+protoc -I .. -I . --go_out=paths=source_relative:../syncthing/ config\authmode.proto config\blockpullorder.proto config\config.proto config\deviceconfiguration.proto config\folderconfiguration.proto config\foldertype.proto config\guiconfiguration.proto config\ldapconfiguration.proto config\ldaptransport.proto config\observed.proto config\optionsconfiguration.proto config\pullorder.proto config\size.proto config\tuning.proto config\versioningconfiguration.proto
+protoc -I .. -I . --go_out=paths=source_relative:../syncthing/ fs\copyrangemethod.proto fs\types.proto
+protoc -I .. -I . --go_out=paths=source_relative:../syncthing/ db\structs.proto
+protoc -I .. -I . --go_out=paths=source_relative:../syncthing/ discover\local.proto
 cd ..

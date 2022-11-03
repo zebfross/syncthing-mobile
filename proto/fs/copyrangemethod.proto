@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package fs;
 
-option go_package = "syncthing/fs";
+option go_package = "github.com/zebfross/syncthing-mobile/syncthing/fs";
 
 
 enum CopyRangeMethod {

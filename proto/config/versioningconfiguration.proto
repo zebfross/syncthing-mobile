@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package config;
 
-option go_package = "syncthing/config";
+option go_package = "github.com/zebfross/syncthing-mobile/syncthing/config";
 
-import "lib/fs/types.proto";
+import "fs/types.proto";
 
 // VersioningConfiguration is used in the code and for JSON serialization
 message VersioningConfiguration {

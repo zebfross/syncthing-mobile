@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package discover;
 
-option go_package = "syncthing/discover";
+option go_package = "github.com/zebfross/syncthing-mobile/syncthing/discover";
 
 message Announce {
     bytes           id          = 1;
