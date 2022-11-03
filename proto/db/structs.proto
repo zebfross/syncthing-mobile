@@ -67,7 +67,7 @@ message Counts {
     int32  deleted     = 4;
     int64  bytes       = 5;
     int64  sequence    = 6; // zero for the global state
-    bytes  device_id   = 17 // device ID for remote devices, or special values for local/global
+    bytes  device_id   = 17; // device ID for remote devices, or special values for local/global
     uint32 local_flags = 18; // the local flag for this count bucket
 }
 
