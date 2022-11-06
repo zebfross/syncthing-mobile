@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package config;
 
-option go_package = "github.com/zebfross/syncthing-mobile/syncthing/config";
+option go_package = "syncthing/config";
 
-import "config/ldaptransport.proto";
+import "lib/config/ldaptransport.proto";
 
 message LDAPConfiguration {
     string        address              = 1;

@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.28.1
 // 	protoc        v3.21.9
-// source: config/authmode.proto
+// source: lib/config/authmode.proto
 
 package config
 
@@ -50,11 +50,11 @@ func (x AuthMode) String() string {
 }
 
 func (AuthMode) Descriptor() protoreflect.EnumDescriptor {
-	return file_config_authmode_proto_enumTypes[0].Descriptor()
+	return file_lib_config_authmode_proto_enumTypes[0].Descriptor()
 }
 
 func (AuthMode) Type() protoreflect.EnumType {
-	return &file_config_authmode_proto_enumTypes[0]
+	return &file_lib_config_authmode_proto_enumTypes[0]
 }
 
 func (x AuthMode) Number() protoreflect.EnumNumber {
@@ -63,41 +63,39 @@ func (x AuthMode) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use AuthMode.Descriptor instead.
 func (AuthMode) EnumDescriptor() ([]byte, []int) {
-	return file_config_authmode_proto_rawDescGZIP(), []int{0}
+	return file_lib_config_authmode_proto_rawDescGZIP(), []int{0}
 }
 
-var File_config_authmode_proto protoreflect.FileDescriptor
+var File_lib_config_authmode_proto protoreflect.FileDescriptor
 
-var file_config_authmode_proto_rawDesc = []byte{
-	0x0a, 0x15, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2f, 0x61, 0x75, 0x74, 0x68, 0x6d, 0x6f, 0x64,
-	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x06, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2a,
-	0x34, 0x0a, 0x08, 0x41, 0x75, 0x74, 0x68, 0x4d, 0x6f, 0x64, 0x65, 0x12, 0x14, 0x0a, 0x10, 0x41,
-	0x55, 0x54, 0x48, 0x5f, 0x4d, 0x4f, 0x44, 0x45, 0x5f, 0x53, 0x54, 0x41, 0x54, 0x49, 0x43, 0x10,
-	0x00, 0x12, 0x12, 0x0a, 0x0e, 0x41, 0x55, 0x54, 0x48, 0x5f, 0x4d, 0x4f, 0x44, 0x45, 0x5f, 0x4c,
-	0x44, 0x41, 0x50, 0x10, 0x01, 0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e,
-	0x63, 0x6f, 0x6d, 0x2f, 0x7a, 0x65, 0x62, 0x66, 0x72, 0x6f, 0x73, 0x73, 0x2f, 0x73, 0x79, 0x6e,
-	0x63, 0x74, 0x68, 0x69, 0x6e, 0x67, 0x2d, 0x6d, 0x6f, 0x62, 0x69, 0x6c, 0x65, 0x2f, 0x73, 0x79,
-	0x6e, 0x63, 0x74, 0x68, 0x69, 0x6e, 0x67, 0x2f, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x62, 0x06,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_lib_config_authmode_proto_rawDesc = []byte{
+	0x0a, 0x19, 0x6c, 0x69, 0x62, 0x2f, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2f, 0x61, 0x75, 0x74,
+	0x68, 0x6d, 0x6f, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x06, 0x63, 0x6f, 0x6e,
+	0x66, 0x69, 0x67, 0x2a, 0x34, 0x0a, 0x08, 0x41, 0x75, 0x74, 0x68, 0x4d, 0x6f, 0x64, 0x65, 0x12,
+	0x14, 0x0a, 0x10, 0x41, 0x55, 0x54, 0x48, 0x5f, 0x4d, 0x4f, 0x44, 0x45, 0x5f, 0x53, 0x54, 0x41,
+	0x54, 0x49, 0x43, 0x10, 0x00, 0x12, 0x12, 0x0a, 0x0e, 0x41, 0x55, 0x54, 0x48, 0x5f, 0x4d, 0x4f,
+	0x44, 0x45, 0x5f, 0x4c, 0x44, 0x41, 0x50, 0x10, 0x01, 0x42, 0x12, 0x5a, 0x10, 0x73, 0x79, 0x6e,
+	0x63, 0x74, 0x68, 0x69, 0x6e, 0x67, 0x2f, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_config_authmode_proto_rawDescOnce sync.Once
-	file_config_authmode_proto_rawDescData = file_config_authmode_proto_rawDesc
+	file_lib_config_authmode_proto_rawDescOnce sync.Once
+	file_lib_config_authmode_proto_rawDescData = file_lib_config_authmode_proto_rawDesc
 )
 
-func file_config_authmode_proto_rawDescGZIP() []byte {
-	file_config_authmode_proto_rawDescOnce.Do(func() {
-		file_config_authmode_proto_rawDescData = protoimpl.X.CompressGZIP(file_config_authmode_proto_rawDescData)
+func file_lib_config_authmode_proto_rawDescGZIP() []byte {
+	file_lib_config_authmode_proto_rawDescOnce.Do(func() {
+		file_lib_config_authmode_proto_rawDescData = protoimpl.X.CompressGZIP(file_lib_config_authmode_proto_rawDescData)
 	})
-	return file_config_authmode_proto_rawDescData
+	return file_lib_config_authmode_proto_rawDescData
 }
 
-var file_config_authmode_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_config_authmode_proto_goTypes = []interface{}{
+var file_lib_config_authmode_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_lib_config_authmode_proto_goTypes = []interface{}{
 	(AuthMode)(0), // 0: config.AuthMode
 }
-var file_config_authmode_proto_depIdxs = []int32{
+var file_lib_config_authmode_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -105,27 +103,27 @@ var file_config_authmode_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_config_authmode_proto_init() }
-func file_config_authmode_proto_init() {
-	if File_config_authmode_proto != nil {
+func init() { file_lib_config_authmode_proto_init() }
+func file_lib_config_authmode_proto_init() {
+	if File_lib_config_authmode_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_config_authmode_proto_rawDesc,
+			RawDescriptor: file_lib_config_authmode_proto_rawDesc,
 			NumEnums:      1,
 			NumMessages:   0,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_config_authmode_proto_goTypes,
-		DependencyIndexes: file_config_authmode_proto_depIdxs,
-		EnumInfos:         file_config_authmode_proto_enumTypes,
+		GoTypes:           file_lib_config_authmode_proto_goTypes,
+		DependencyIndexes: file_lib_config_authmode_proto_depIdxs,
+		EnumInfos:         file_lib_config_authmode_proto_enumTypes,
 	}.Build()
-	File_config_authmode_proto = out.File
-	file_config_authmode_proto_rawDesc = nil
-	file_config_authmode_proto_goTypes = nil
-	file_config_authmode_proto_depIdxs = nil
+	File_lib_config_authmode_proto = out.File
+	file_lib_config_authmode_proto_rawDesc = nil
+	file_lib_config_authmode_proto_goTypes = nil
+	file_lib_config_authmode_proto_depIdxs = nil
 }

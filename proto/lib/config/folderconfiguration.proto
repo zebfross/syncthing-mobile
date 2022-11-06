@@ -2,16 +2,16 @@ syntax = "proto3";
 
 package config;
 
-option go_package = "github.com/zebfross/syncthing-mobile/syncthing/config";
+option go_package = "syncthing/config";
 
-import "config/foldertype.proto";
-import "config/size.proto";
-import "config/pullorder.proto";
-import "config/versioningconfiguration.proto";
-import "config/blockpullorder.proto";
+import "lib/config/foldertype.proto";
+import "lib/config/size.proto";
+import "lib/config/pullorder.proto";
+import "lib/config/versioningconfiguration.proto";
+import "lib/config/blockpullorder.proto";
 
-import "fs/types.proto";
-import "fs/copyrangemethod.proto";
+import "lib/fs/types.proto";
+import "lib/fs/copyrangemethod.proto";
 
 message FolderDeviceConfiguration {
     bytes  device_id           = 1 ;

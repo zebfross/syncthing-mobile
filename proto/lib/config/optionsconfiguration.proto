@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package config;
 
-option go_package = "github.com/zebfross/syncthing-mobile/syncthing/config";
+option go_package = "syncthing/config";
 
-import "config/tuning.proto";
-import "config/size.proto";
+import "lib/config/tuning.proto";
+import "lib/config/size.proto";
 
 message OptionsConfiguration {
     repeated string listen_addresses                         = 1 ;

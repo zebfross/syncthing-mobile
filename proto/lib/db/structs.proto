@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package db;
 
-option go_package = "github.com/zebfross/syncthing-mobile/syncthing/db";
+option go_package = "syncthing/db";
 
 import "google/protobuf/timestamp.proto";
-import "protocol/bep.proto";
+import "lib/protocol/bep.proto";
 
 message FileVersion {
     protocol.Vector version         = 1;
