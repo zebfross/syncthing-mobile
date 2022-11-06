@@ -20,7 +20,7 @@ func Call(name string, payload []byte) ([]byte, error) {
 		return output, fmt.Errorf("not implemented: %s", name)
 	}
 
-	return output, nil
+	return output, nil;
 }
 
 type instance struct {
