@@ -13,7 +13,7 @@ deps:
 	go mod download
 
 test:
-	go test ./syncthing/... -coverprofile=profile.cov -cover -short -count 1
+	go test ./lib/... -coverprofile=profile.cov -cover -short -count 1
 
 fmt:
 	go fmt ./...
@@ -24,6 +24,9 @@ clean:
 binding: deps
 	mkdir -p $(BINDING_OUTPUT)
 	$(GO_BINARY) build -ldflags="-w -s $(EXTRA_LD_FLAGS)" -o $(BINDING_OUTPUT)/$(BINDING_FILE) -buildmode=$(BUILD_MODE) $(BINDING_ARGS) binding/main.go
+
+proto: $(wildcard proto/lib/**/*.proto)
+	go run build.go proto
 
 include Makefile.android
 include Makefile.ios

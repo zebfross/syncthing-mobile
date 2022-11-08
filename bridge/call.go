@@ -5,7 +5,7 @@ import (
 
 	flatbuffers "github.com/google/flatbuffers/go"
 	"github.com/zebfross/syncthing-mobile/bridge/model"
-	syncthing "github.com/zebfross/syncthing-mobile/syncthing"
+	syncthing "github.com/zebfross/syncthing-mobile/lib"
 )
 
 // Call ...

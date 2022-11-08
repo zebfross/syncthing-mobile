@@ -4,7 +4,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-//+build ignore
+//go:build ignore
+// +build ignore
 
 package main
 
@@ -16,7 +17,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/zebfross/syncthing-mobilemobilemobilemobilemobile/lib/config"
+	"github.com/zebfross/syncthing-mobile/lib/config"
 )
 
 func main() {
@@ -52,7 +53,7 @@ func walk(w *csv.Writer, prefix string, data interface{}) {
 			pfx = prefix + "." + s.Type().Field(i).Name + "[]"
 		}
 
-		if f.Kind() == reflect.Struct && strings.HasPrefix(f.Type().PkgPath(), "github.com/zebfross/syncthing-mobilemobile") {
+		if f.Kind() == reflect.Struct && strings.HasPrefix(f.Type().PkgPath(), "github.com/zebfross/syncthing-mobile") {
 			walk(w, pfx, f.Addr().Interface())
 		} else {
 			jsonTag := ft.Tag.Get("json")

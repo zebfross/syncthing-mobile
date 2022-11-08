@@ -4,7 +4,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-//+build ignore
+//go:build ignore
+// +build ignore
 
 package main
 
@@ -37,7 +38,7 @@ func main() {
 	vanity.ForEachFile(files, vanity.TurnOnMarshalerAll)
 	vanity.ForEachFile(files, vanity.TurnOnUnmarshalerAll)
 	vanity.ForEachEnumInFiles(files, HandleCustomEnumExtensions)
-	vanity.ForEachFile(files, SetPackagePrefix("github.com/zebfross/syncthing-mobilemobile"))
+	vanity.ForEachFile(files, SetPackagePrefix("github.com/zebfross/syncthing-mobile"))
 	vanity.ForEachFile(files, HandleFile)
 	vanity.ForEachFieldInFilesExcludingExtensions(files, TurnOffNullableForMessages)
 
@@ -240,7 +241,7 @@ func HandleCustomExtensions(file *descriptor.FileDescriptorProto) func(msg *desc
 			}
 
 			if val, ok := GetFieldBooleanExtension(field, ext.E_DeviceId); ok && val {
-				if *file.Options.GoPackage != "github.com/zebfross/syncthing-mobilemobile/lib/protocol" {
+				if *file.Options.GoPackage != "github.com/zebfross/syncthing-mobile/lib/protocol" {
 					SetStringFieldOption(field, gogoproto.E_Customtype, "github.com/zebfross/syncthing-mobile/lib/protocol.DeviceID")
 				} else {
 					SetStringFieldOption(field, gogoproto.E_Customtype, "DeviceID")
