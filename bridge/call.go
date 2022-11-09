@@ -34,7 +34,7 @@ func NewInstance() *instance {
 func (m instance) getDeviceId() []byte {
 	response := flatbuffers.NewBuilder(0)
 	output, err := m.instance.GetDeviceId()
-	return m._stringResponse(response, output, err)
+	return m._stringResponse(response, output.String(), err)
 }
 
 func (m instance) _boolResponse(response *flatbuffers.Builder, output bool, err error) []byte {

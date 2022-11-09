@@ -29,7 +29,6 @@ import (
 
 	"github.com/zebfross/syncthing-mobile/lib/build"
 	"github.com/zebfross/syncthing-mobile/lib/config"
-	"github.com/zebfross/syncthing-mobile/lib/connections"
 	"github.com/zebfross/syncthing-mobile/lib/db"
 	"github.com/zebfross/syncthing-mobile/lib/events"
 	"github.com/zebfross/syncthing-mobile/lib/fs"
@@ -71,7 +70,12 @@ type Availability struct {
 type Model interface {
 	suture.Service
 
-	connections.Model
+	protocol.Model
+	AddConnection(conn protocol.Connection, hello protocol.Hello)
+	NumConnections() int
+	Connection(remoteID protocol.DeviceID) (protocol.Connection, bool)
+	OnHello(protocol.DeviceID, net.Addr, protocol.Hello) error
+	GetHello(protocol.DeviceID) protocol.HelloIntf
 
 	ResetFolder(folder string) error
 	DelayScan(folder string, next time.Duration)

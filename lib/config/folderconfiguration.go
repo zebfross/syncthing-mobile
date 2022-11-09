@@ -16,6 +16,7 @@ import (
 	"github.com/shirou/gopsutil/v3/disk"
 
 	"github.com/zebfross/syncthing-mobile/lib/build"
+	"github.com/zebfross/syncthing-mobile/lib/db"
 	"github.com/zebfross/syncthing-mobile/lib/fs"
 	"github.com/zebfross/syncthing-mobile/lib/protocol"
 	"github.com/zebfross/syncthing-mobile/lib/util"
@@ -45,7 +46,7 @@ func (f FolderConfiguration) Copy() FolderConfiguration {
 // Filesystem creates a filesystem for the path and options of this folder.
 // The fset parameter may be nil, in which case no mtime handling on top of
 // the fileystem is provided.
-func (f FolderConfiguration) Filesystem(fset *FolderConfiguration) fs.Filesystem {
+func (f FolderConfiguration) Filesystem(fset *db.FileSet) fs.Filesystem {
 	// This is intentionally not a pointer method, because things like
 	// cfg.Folders["default"].Filesystem(nil) should be valid.
 	opts := make([]fs.Option, 0, 3)
