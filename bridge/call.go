@@ -16,6 +16,8 @@ func Call(name string, payload []byte) ([]byte, error) {
 	switch name {
 	case "getDeviceId":
 		output = instance.getDeviceId()
+	case "linkDeviceId":
+		output = instance.linkDeviceId(payload);
 	default:
 		return output, fmt.Errorf("not implemented: %s", name)
 	}
@@ -34,7 +36,15 @@ func NewInstance() *instance {
 func (m instance) getDeviceId() []byte {
 	response := flatbuffers.NewBuilder(0)
 	output, err := m.instance.GetDeviceId()
-	return m._stringResponse(response, output.String(), err)
+	return m._stringResponse(response, output, err)
+}
+
+func (m instance) linkDeviceId(payload []byte) []byte {
+	response := flatbuffers.NewBuilder(0)
+	request := model.GetRootAsLinkDeviceIdRequest(payload, 0)
+
+	output, err := m.instance.LinkDeviceId(m.toString(request.DeviceId()))
+	return m._boolResponse(response, output, err)
 }
 
 func (m instance) _boolResponse(response *flatbuffers.Builder, output bool, err error) []byte {

@@ -26,3 +26,7 @@ table IntResponse {
   output:int64;
   error:string;
 }
+
+table LinkDeviceIdRequest {
+  deviceId:string;
+}
