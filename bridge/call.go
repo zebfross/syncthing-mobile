@@ -8,16 +8,21 @@ import (
 	syncthing "github.com/zebfross/syncthing-mobile/lib"
 )
 
+var _instance *instance = nil;
+
 // Call ...
 func Call(name string, payload []byte) ([]byte, error) {
 
-	instance := NewInstance()
+	if(_instance == nil) {
+		_instance = NewInstance()
+	}
+	
 	var output []byte = nil
 	switch name {
 	case "getDeviceId":
-		output = instance.getDeviceId()
+		output = _instance.getDeviceId()
 	case "linkDeviceId":
-		output = instance.linkDeviceId(payload);
+		output = _instance.linkDeviceId(payload);
 	default:
 		return output, fmt.Errorf("not implemented: %s", name)
 	}
