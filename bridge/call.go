@@ -35,7 +35,8 @@ type instance struct {
 }
 
 func NewInstance() *instance {
-	return &instance{instance: syncthing.NewSyncthingLib()}
+	inst, _ := syncthing.NewSyncthingLib();
+	return &instance{instance: inst}
 }
 
 func (m instance) getDeviceId() []byte {
